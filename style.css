@@ -1,0 +1,92 @@
+/* 1. Global Reset */
+body {
+    font-family: "Oswald", sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* 2. Header & Navigation */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: black;
+}
+
+.nav-btn {
+    font-family: "Oswald", sans-serif;
+    color: rgb(147, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    padding: 10px;
+}
+
+.nav-btn:hover {
+    color: white;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* The Active Page State */
+.nav-btn.active {
+    color: white !important;
+    background-color: rgba(147, 0, 0, 0.2);
+    border-bottom: 3px solid rgb(147, 0, 0);
+    pointer-events: none;
+}
+
+/* 3. Photo Gallery (Touching Borders) */
+.gallery {
+    column-count: 2;
+    column-gap: 0;
+    line-height: 0; /* Important: removes tiny gaps between rows */
+}
+
+.gallery img, .hero-img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery img:hover {
+    opacity: 0.7;
+}
+
+/* 4. Footer Text */
+.footer-text {
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px 0;
+    text-transform: uppercase;
+}
+
+/* 5. Responsive Design */
+@media (max-width: 800px) {
+    .gallery {
+        column-count: 1;
+    }
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-btn {
+        font-size: 18px;
+    }
+    .footer-text {
+        font-size: 40px;
+    }
+}
